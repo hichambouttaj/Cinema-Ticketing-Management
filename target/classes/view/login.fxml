@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="460.0" minHeight="460.0" prefHeight="460.0" prefWidth="680.0" style="-fx-background-color: transparent;" styleClass="background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="460.0" prefWidth="260.0" style="-fx-background-color: #360CCD; -fx-border-radius: 10px; -fx-background-radius: 10px 0 0 10px;">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="162.0" layoutX="49.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="260.0" maxHeight="460.0" maxWidth="420.0" minHeight="460.0" minWidth="420.0" prefHeight="460.0" prefWidth="420.0" style="-fx-background-color: #fff; -fx-border-radius: 10px 10px 10px 10px; -fx-background-radius: 0 10px 10px 0;">
+         <children>
+            <FontAwesomeIconView fill="#1e90fc" glyphName="USER" layoutX="60.0" layoutY="116.0" selectionFill="#1e90fc" />
+            <TextField fx:id="usernameField" layoutX="90.0" layoutY="91.0" maxHeight="40.0" minHeight="40.0" onKeyPressed="#keyPressedHandler" prefHeight="17.0" prefWidth="240.0" promptText="username" />
+            <PasswordField fx:id="passwordField" layoutX="90.0" layoutY="152.0" onKeyPressed="#keyPressedHandler" prefHeight="40.0" prefWidth="240.0" promptText="password"/>
+            <JFXButton fx:id="loginBtn" layoutX="253.0" layoutY="233.0" onAction="#loginHandler" prefHeight="40.0" prefWidth="130.0" styleClass="btn" text="Sign in" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="12.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="90.0" layoutY="329.0" onAction="#SignUpHandler" prefHeight="40.0" prefWidth="240.0" styleClass="btn" text="Sign up" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Regular" size="15.0" />
+               </font></JFXButton>
+            <Label id="forgetText" layoutX="53.0" layoutY="233.0" onMouseClicked="#forgetPassHandler" prefHeight="40.0" prefWidth="140.0" text="Forget Password ?" textFill="#1e90fc">
+               <font>
+                  <Font name="Dubai Regular" size="15.0" />
+               </font></Label>
+            <FontAwesomeIconView fill="#1e90fc" glyphName="LOCK" layoutX="60.0" layoutY="177.0" selectionFill="#1e90fc" size="15" />
+            <FontAwesomeIconView id="closeBtn" fill="#1e90fc" glyphName="CLOSE" layoutX="395.0" layoutY="20.0" onMouseClicked="#closeHandler" selectionFill="#1e90fc" />
+            <FontAwesomeIconView id="minBtn" fill="#1e90fc" glyphName="WINDOW_MINIMIZE" layoutX="377.0" layoutY="17.0" onMouseClicked="#minimizeHandler" selectionFill="#1e90fc" size="12" textAlignment="CENTER" />
+         </children></AnchorPane>
+      
+   </children>
+</AnchorPane>

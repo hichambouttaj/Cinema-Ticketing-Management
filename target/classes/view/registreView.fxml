@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="460.0" maxWidth="420.0" minHeight="460.0" minWidth="420.0" prefHeight="460.0" prefWidth="420.0" style="-fx-background-color: #fff; -fx-border-radius: 10px 10px 10px 10px; -fx-background-radius: 10px;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistreViewController">
+   <children>
+      <VBox layoutX="77.0" layoutY="103.0" prefHeight="147.0" prefWidth="266.0" spacing="30.0">
+         <children>
+            <HBox alignment="CENTER" spacing="15.0" />
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <FontAwesomeIconView fill="#1e90fc" glyphName="USER" selectionFill="#1e90fc" />
+                  <TextField fx:id="usernameField" maxHeight="30.0" minHeight="30.0" onKeyPressed="#keyPressedHandler" prefHeight="30.0" prefWidth="240.0" promptText="username" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <FontAwesomeIconView fill="#1e90fc" glyphName="VCARD_ALT" selectionFill="#1e90fc" />
+                  <TextField fx:id="emailField" maxHeight="30.0" minHeight="30.0" onKeyPressed="#keyPressedHandler" prefHeight="30.0" prefWidth="240.0" promptText="email" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <FontAwesomeIconView fill="#1e90fc" glyphName="LOCK" selectionFill="#1e90fc" />
+                  <PasswordField fx:id="passwordField" maxHeight="30.0" minHeight="30.0" onKeyPressed="#keyPressedHandler" prefHeight="30.0" prefWidth="240.0" promptText="password" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0" />
+         </children>
+      </VBox>
+      <FontAwesomeIconView id="closeBtn" fill="#1e90fc" glyphName="CLOSE" layoutX="395.0" layoutY="20.0" onMouseClicked="#closeHandler" selectionFill="#1e90fc" />
+      <FontAwesomeIconView id="minBtn" fill="#1e90fc" glyphName="WINDOW_MINIMIZE" layoutX="377.0" layoutY="17.0" onMouseClicked="#minimizeHandler" selectionFill="#1e90fc" size="12" textAlignment="CENTER" />
+      <Label layoutX="166.0" layoutY="52.0" text="Registre Form" />
+      <JFXButton fx:id="signUpBtn" layoutX="89.0" layoutY="356.0" onAction="#signUpHandler" prefHeight="40.0" prefWidth="240.0" styleClass="btn" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="Dubai Regular" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_PLUS" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

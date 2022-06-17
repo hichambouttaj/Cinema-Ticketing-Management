@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<DialogPane prefHeight="320.0" prefWidth="349.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ActorController">
+   <content>
+      <AnchorPane prefHeight="155.0" prefWidth="386.0">
+         <children>
+            <ComboBox fx:id="actorComboBox" layoutX="82.0" layoutY="58.0" prefHeight="40.0" prefWidth="185.0" promptText="Actor" />
+            <TextField fx:id="roleField" layoutX="82.0" layoutY="118.0" promptText="Role" />
+         </children>
+      </AnchorPane>
+   </content>
+   <header>
+      <Label alignment="CENTER" prefHeight="59.0" prefWidth="349.0" text="Add Actor" />
+   </header>
+</DialogPane>

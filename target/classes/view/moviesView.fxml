@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="686.4" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MovieViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane prefHeight="189.0" prefWidth="647.0" stylesheets="@styles.css">
+         <children>
+            <ImageView fx:id="image" fitHeight="150.0" fitWidth="118.0" layoutX="29.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="searchBarMovie" layoutX="416.0" layoutY="23.0" promptText="Movie Name" />
+            <FontAwesomeIconView fill="#1d89f0" glyphName="SEARCH" layoutX="608.0" layoutY="52.0" onMouseClicked="#searchBtnHandler" size="25" />
+            <AnchorPane layoutX="152.0" layoutY="23.0" prefHeight="144.0" prefWidth="242.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="20.0" text="Movie :" />
+                  <Label layoutX="14.0" layoutY="58.0" text="Genre :" />
+                  <Label layoutX="14.0" layoutY="95.0" text="Director:" />
+                  <Label fx:id="movieTitle" layoutX="88.0" layoutY="20.0" prefHeight="28.0" prefWidth="134.0" text="Label" />
+                  <Label fx:id="directorField" layoutX="88.0" layoutY="95.0" prefHeight="28.0" prefWidth="149.0" text="Label" />
+                  <ComboBox fx:id="categoryList" layoutX="68.0" layoutY="57.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="118.0" />
+                  <Label layoutX="14.0" layoutY="125.0" prefHeight="28.0" prefWidth="54.0" text="Salle  : " />
+                  <Label fx:id="salleName" layoutX="87.0" layoutY="125.0" prefHeight="28.0" prefWidth="54.0" />
+               </children></AnchorPane>
+            <JFXButton layoutX="433.0" layoutY="106.0" onAction="#getTicketHandler" prefHeight="25.0" prefWidth="149.0" styleClass="btn" text="Get Ticket" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="326.0" prefWidth="646.0">
+         <children>
+            <HBox prefHeight="326.0" prefWidth="646.0">
+               <children>
+                  <AnchorPane prefHeight="326.0" prefWidth="498.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="6.0" text="Description : " />
+                        <Label fx:id="descriptionField" alignment="TOP_LEFT" layoutX="14.0" layoutY="34.0" prefHeight="127.0" prefWidth="306.0" text="Label" wrapText="true" />
+                        <Label layoutX="17.0" layoutY="163.0" text="Actors :" />
+                        <TableView fx:id="tableViewActors" layoutX="24.0" layoutY="198.0" maxWidth="300.0" minWidth="300.0" prefHeight="127.0" prefWidth="300.0">
+                          <columns>
+                            <TableColumn editable="false" maxWidth="175.0" minWidth="175.0" prefWidth="175.0" resizable="false" sortable="false" text="Full Name">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="fullName" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn editable="false" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" resizable="false" sortable="false" text="Role">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="role" />
+                                </cellValueFactory>
+                            </TableColumn>
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="326.0" prefWidth="450.0">
+                     <children>
+                        <Label layoutX="116.0" layoutY="2.0" text="Date Show" />
+                        <TableView fx:id="tableViewShows" layoutY="36.0" prefHeight="291.0" prefWidth="299.0">
+                          <columns>
+                            <TableColumn editable="false" prefWidth="120.0" resizable="false" sortable="false" text="Date">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="showDate" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn editable="false" prefWidth="53.0" resizable="false" sortable="false" text="Start">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="showStart" />
+                                </cellValueFactory>
+                            </TableColumn>
+                              <TableColumn editable="false" prefWidth="49.0" resizable="false" sortable="false" text="End">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="showEnd" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn editable="false" prefWidth="77.0" resizable="false" sortable="false" text="Price">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="price" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </children>
+</VBox>

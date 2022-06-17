@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="686.4" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionMovieViewController">
+   <children>
+      <HBox layoutX="296.0" layoutY="54.0" prefHeight="40.0" spacing="20.0">
+         <children>
+            <JFXButton maxHeight="40.0" minHeight="40.0" onAction="#addMovieHandler" prefHeight="40.0" prefWidth="89.0" styleClass="btn" text="Add" />
+            <JFXButton maxHeight="40.0" minHeight="40.0" onAction="#updateMovieHandler" prefHeight="40.0" prefWidth="89.0" styleClass="btn" text="Update" />
+            <JFXButton maxHeight="40.0" minHeight="40.0" onAction="#removeMovieHandler" prefHeight="40.0" prefWidth="89.0" styleClass="btn" text="Remove" />
+         </children>
+      </HBox>
+      <TextField fx:id="searchBarMovie" layoutX="42.0" layoutY="78.0" promptText="Movie title" />
+      <FontAwesomeIconView fx:id="searchBtn" fill="#1d89f0" glyphName="SEARCH" layoutX="243.0" layoutY="105.0" onMouseClicked="#searchMovieHandler" selectionFill="#1d89f0" size="20" styleClass="searchBtn" tabSize="15" text="" />
+      <Label layoutX="42.0" layoutY="140.0" text="List Movies : " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="14.0" prefHeight="28.0" prefWidth="204.0" text="Gestion Movies" />
+      <TableView fx:id="tableViewMovie" layoutX="42.0" layoutY="176.0" prefHeight="188.0" prefWidth="602.0">
+         <columns>
+            <TableColumn editable="false" minWidth="58.0" prefWidth="207.9999656677246" sortable="false" text="title">
+               <cellValueFactory>
+                  <PropertyValueFactory property="title" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="153.59999084472656" sortable="false" text="director">
+               <cellValueFactory>
+                  <PropertyValueFactory property="director" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" minWidth="240.0" prefWidth="240.0" sortable="false" text="description">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <TableView fx:id="tableViewShow" layoutX="42.0" layoutY="369.0" prefHeight="170.0" prefWidth="602.0">
+         <columns>
+            <TableColumn editable="false" minWidth="58.0" prefWidth="185.5999412536621" sortable="false" text="Date">
+               <cellValueFactory>
+                  <PropertyValueFactory property="showDate" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="144.8000030517578" sortable="false" text="Start Show">
+               <cellValueFactory>
+                  <PropertyValueFactory property="showStart" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="145.5999755859375" sortable="false" text="End Show">
+               <cellValueFactory>
+                  <PropertyValueFactory property="showEnd" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" minWidth="132.0" prefWidth="132.0" sortable="false" text="price">
+               <cellValueFactory>
+                  <PropertyValueFactory property="price" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <HBox layoutX="296.0" layoutY="108.0" spacing="20.0">
+         <children>
+            <JFXButton maxHeight="40.0" minHeight="40.0" onAction="#addShowHandler" prefHeight="40.0" prefWidth="89.0" styleClass="btn" text="Add Show">
+               <font>
+                  <Font size="9.0" />
+               </font></JFXButton>
+            <JFXButton maxHeight="40.0" minHeight="40.0" onAction="#updateShowHandler" prefHeight="40.0" prefWidth="89.0" styleClass="btn" text="Update" />
+            <JFXButton maxHeight="40.0" minHeight="40.0" onAction="#removeShowHandler" prefHeight="40.0" prefWidth="89.0" styleClass="btn" text="Remove" />
+         </children>
+      </HBox>
+      <JFXButton layoutX="609.0" layoutY="54.0" maxHeight="95.0" minHeight="40.0" onAction="#addActorHandler" prefHeight="93.0" prefWidth="56.0" styleClass="btn" text="Add Actor" textAlignment="CENTER" wrapText="true" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>

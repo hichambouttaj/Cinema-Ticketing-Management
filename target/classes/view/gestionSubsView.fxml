@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="686.4" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionSubsViewController">
+    <children>
+        <TextField fx:id="searchBarSubs" layoutX="42.0" layoutY="78.0" promptText="subscriber name" />
+        <FontAwesomeIconView fx:id="searchBtn" fill="#1d89f0" glyphName="SEARCH" layoutX="243.0" layoutY="105.0" onMouseClicked="#searchSubsHandler" size="20" styleClass="searchBtn" tabSize="15" text="" />
+        <Label layoutX="42.0" layoutY="140.0" text="List Subs : " />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="227.0" layoutY="14.0" prefHeight="28.0" prefWidth="204.0" text="Gestion Subscribers" />
+      <HBox layoutX="296.0" layoutY="78.0" spacing="20.0">
+         <children>
+            <JFXButton fx:id="addSubsHandler" maxHeight="40.0" minHeight="40.0" onAction="#addSubsHandler" prefHeight="40.0" prefWidth="100.0" styleClass="btn" text="Add" />
+            <JFXButton fx:id="updateSubsHandler" maxHeight="40.0" minHeight="40.0" onAction="#updateSubsHandler" prefHeight="40.0" prefWidth="100.0" styleClass="btn" text="Update" />
+            <JFXButton fx:id="removeSubsHandler" maxHeight="40.0" minHeight="40.0" onAction="#removeSubsHandler" prefHeight="40.0" prefWidth="100.0" styleClass="btn" text="Remove" />
+         </children>
+      </HBox>
+      <JFXCheckBox fx:id="filterBtn" layoutX="135.0" layoutY="140.0" onMouseClicked="#filterBySubsEndHandler" text="Filter by Subs End Date" />
+      <TableView fx:id="listViewSubs" layoutX="42.0" layoutY="178.0" prefHeight="350.0" prefWidth="602.0">
+        <columns>
+          <TableColumn editable="false" maxWidth="111.0" minWidth="58.0" prefWidth="100.0" resizable="false" sortable="false" text="first Name">
+              <cellValueFactory>
+                  <PropertyValueFactory property="firstName" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="93.0" resizable="false" sortable="false" text="last Name">
+              <cellValueFactory>
+                  <PropertyValueFactory property="lastName" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn editable="false" minWidth="0.0" prefWidth="141.6000518798828" resizable="false" sortable="false" text="address">
+                <cellValueFactory>
+                    <PropertyValueFactory property="address" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" minWidth="5.0" prefWidth="116.7999267578125" resizable="false" sortable="false" text="phone">
+                <cellValueFactory>
+                    <PropertyValueFactory property="phone" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="150.39990234375" resizable="false" sortable="false" text="subs End">
+                <cellValueFactory>
+                    <PropertyValueFactory property="subsEnd" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>

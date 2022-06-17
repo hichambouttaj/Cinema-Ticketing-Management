@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane fx:id="dialogPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="368.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+    <content>
+        <VBox alignment="CENTER" layoutX="72.0" layoutY="78.0" prefHeight="284.0" prefWidth="222.0" spacing="20.0">
+            <children>
+                <TextField fx:id="firstNameField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="first Name" />
+                <TextField fx:id="lastNameField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="last Name" />
+                <TextField fx:id="addressField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="address" />
+                <TextField fx:id="phoneField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="phone" />
+                <DatePicker fx:id="subsEndField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="subs End">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin></DatePicker>
+            </children>
+        </VBox>
+    </content>
+</DialogPane>

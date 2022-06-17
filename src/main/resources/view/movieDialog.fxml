@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane prefHeight="308.0" prefWidth="287.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MovieController">
+   <header>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="600.0" text="Add Movie" />
+   </header>
+    <content>
+        <VBox alignment="CENTER" layoutX="72.0" layoutY="78.0" prefHeight="216.0" prefWidth="252.0" spacing="20.0">
+            <children>
+                <TextField fx:id="movieTitleField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="movie Title" />
+                <TextField fx:id="directorField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="director" />
+                <TextField fx:id="descriptionField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="descritpion" />
+            <TextField fx:id="imagePathField" maxHeight="38.0" maxWidth="250.0" minHeight="38.0" prefHeight="38.0" prefWidth="200.0" promptText="image Path" />
+            </children>
+        </VBox>
+    </content>
+</DialogPane>

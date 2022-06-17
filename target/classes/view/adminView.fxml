@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminViewController">
+    <top>
+        <AnchorPane prefHeight="44.0" prefWidth="900.0" style="-fx-background-color: #1E90FC;" BorderPane.alignment="CENTER">
+            <children>
+                <FontAwesomeIconView fill="WHITE" glyphName="HAND_PEACE_ALT" layoutX="374.0" layoutY="27.0" size="20" />
+                <Label alignment="CENTER" layoutX="374.0" layoutY="4.0" prefHeight="28.0" prefWidth="150.0" text="Cinema Ticket" textFill="WHITE">
+                    <font>
+                        <Font name="Dubai Regular" size="18.0" />
+                    </font>
+                </Label>
+                <FontAwesomeIconView id="minBtn" fill="WHITE" glyphName="WINDOW_MINIMIZE" layoutX="853.0" layoutY="22.0" onMouseClicked="#minimizeHandler" size="15" />
+                <FontAwesomeIconView id="closeBtn" fill="WHITE" glyphName="CLOSE" layoutX="876.0" layoutY="25.0" onMouseClicked="#closeHandler" size="15" text="" />
+            </children>
+        </AnchorPane>
+    </top>
+    <left>
+        <VBox prefHeight="556.0" prefWidth="213.0" style="-fx-background-color: #246FF0;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="122.0" prefWidth="214.0">
+                    <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE_ALT" size="50" />
+                        <Label fx:id="usernameLabel" text="username" textFill="WHITE">
+                            <font>
+                                <Font name="Dubai Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="15.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+               <children>
+                  <JFXButton fx:id="gestionMoviesViewHandler" buttonType="RAISED" onAction="#gestionMoviesViewHandler" prefHeight="60.0" prefWidth="200.0" text="  Gestion Movies" textAlignment="RIGHT" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE_MOVIE_ALT" size="20" />
+                     </graphic>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="15.0">
+                    <children>
+                        <JFXButton buttonType="RAISED" onAction="#gestionSubsViewHandler" prefHeight="60.0" prefWidth="200.0" text="   Gestion Subs" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIconView fill="WHITE" glyphName="ADDRESS_CARD_ALT" size="20" />
+                            </graphic>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" fillHeight="false" prefHeight="0.0" prefWidth="214.0" spacing="10.0">
+                    <children>
+                        <JFXButton fx:id="logoutHandler" buttonType="RAISED" onAction="#logoutHandler" prefHeight="86.0" prefWidth="132.0" text="  Logout" textFill="WHITE">
+                            <graphic>
+                                <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="20" />
+                            </graphic>
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </JFXButton>
+                    </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="50.0" />
+            </padding>
+        </VBox>
+    </left>
+   <center>
+      <AnchorPane fx:id="anchorPane" prefHeight="556.0" prefWidth="686.4" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

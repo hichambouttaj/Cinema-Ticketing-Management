@@ -1,4 +1,4 @@
-# Gestion_billetterie_cinema
+# Cinema Ticketing Management
 ## Introduction
 Must do to run the project :
 
